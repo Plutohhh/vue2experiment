@@ -10,6 +10,10 @@
       <el-menu-item index="/about">About</el-menu-item>
       <el-menu-item index="/topo">Topo</el-menu-item>
       <el-menu-item index="/father">Father</el-menu-item>
+      <el-menu-item index="/countTime">CountTime</el-menu-item>
+      <el-menu-item index="/textarea">TextArea</el-menu-item>
+      <el-menu-item index="/readme">Readme</el-menu-item>
+      <el-menu-item index="/readme2">Readme2</el-menu-item>
     </el-menu>
     <!-- <el-button @click="testbtn">123</el-button> -->
     <!-- <nav>
@@ -18,7 +22,10 @@
       <router-link to="/topo">topo</router-link>|
       <router-link to="/father">father</router-link>
     </nav> -->
-    <router-view />
+
+    <transition name="fade">
+      <router-view />
+    </transition>
   </div>
 </template>
 <script>
@@ -58,7 +65,28 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.fade-enter-active {
+  animation: bounce-in 1s;
+}
+// .fade-leave-active {
+//   animation: bounce-in 1s reverse;
+// }
+// .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+//   opacity: 0;
+//   // transform: translateY(800px);
+// }
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  // 90% {
+  //   transform: scale(0.5);
+  // }
+  100% {
+    transform: scale(1);
+  }
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -73,6 +101,9 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
+  // background-color: #43bccd;
+  // background-image: radial-gradient(#387f88 11%, transparent 0);
+  // background-size: 55px 55px;
 }
 .el-menu-demo {
 }

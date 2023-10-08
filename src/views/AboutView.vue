@@ -13,6 +13,8 @@
       placeholder="请输入内容"
       clearable
     ></el-input>
+    <h1>params: {{ $route.params }}</h1>
+    <h1>query: {{ $route.query }}</h1>
   </div>
 </template>
 

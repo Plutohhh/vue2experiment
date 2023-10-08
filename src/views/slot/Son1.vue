@@ -4,7 +4,7 @@
     <slot>test2</slot>
     <slot name="slot2">test3</slot>
     <div class="test">
-      <h1>width=800</h1>
+      <h1>width=800px</h1>
     </div>
   </div>
 </template>

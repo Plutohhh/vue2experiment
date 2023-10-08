@@ -4,6 +4,7 @@
     <div class="top-container">
       <div id="mountNode"></div>
     </div>
+    <el-button @click="jump">跳转</el-button>
   </div>
 </template>
 
@@ -13,6 +14,15 @@ export default {
   name: 'Topology',
   data() {
     return {}
+  },
+  methods: {
+    jump: function () {
+      this.$router.push({
+        name: 'about',
+        params: { id: 123123 },
+        query: { name: 'adword', age: 38 }
+      })
+    }
   },
   created() {
     // console.log(JSON.parse(JSON.stringify("123")));

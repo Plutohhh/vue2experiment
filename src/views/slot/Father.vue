@@ -11,7 +11,7 @@
         <h1>Here might be a slot2</h1>
       </template>
     </Son>
-    <div class="longdiv"></div>
+    <!-- <div class="longdiv"></div> -->
   </div>
 </template>
 
@@ -36,8 +36,8 @@ export default {
   // border: red 1px solid;
 }
 .container-father {
-  position: absolute;
-  // height: 100%;
+  // position: absolute;
+  height: 100%;
   // height: 50vh;
   // flex: 1;
   // border: red 1px solid;
@@ -52,8 +52,8 @@ export default {
   .longdiv {
     // background-color: #1f0ffc;
     border: red 1px solid;
-    height: 1800px;
-    width: 100px;
+    height: 800px;
+    width: 800px;
   }
 }
 </style>

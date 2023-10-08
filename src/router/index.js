@@ -11,7 +11,7 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
+    path: '/about:id',
     name: 'about',
     component: () => import('../views/AboutView.vue')
   },
@@ -24,6 +24,31 @@ const routes = [
     path: '/father',
     name: 'father',
     component: () => import('../views/slot/Father')
+  },
+  {
+    path: '/countTime',
+    name: 'countTime',
+    component: () => import('../views/CountTime')
+  },
+  {
+    path: '/textarea',
+    name: 'textarea',
+    component: () => import('../views/TextArea')
+  },
+  {
+    path: '/readme',
+    name: 'readme',
+    component: () => import('../views/Readme')
+  },
+  {
+    path: '/readme2',
+    name: 'readme2',
+    component: () => import('../views/Readme2')
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'notFound',
+    component: () => import('../views/NotFound')
   }
 ]
 
